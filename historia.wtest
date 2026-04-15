@@ -1,0 +1,17 @@
+import caperucita.caperucita
+import feroz.feroz
+import abuelita.abuelita
+import cazador.cazador
+import historia.historia
+
+
+describe "Comprueba si Feroz esta saludable en los diferentes finales, quedando saludable ya que Feroz devora a todos" {
+  test "Feroz gana" {
+    historia.ferozGana()
+    assert.that(feroz.estaSaludable())
+  }
+  test "El Cazador ahuyenta a Feroz, quedando no saludable ya que sufre una crisis" {
+    historia.cazadorAhuyentaAFeroz()
+    assert.notThat(feroz.estaSaludable())
+  }
+}
